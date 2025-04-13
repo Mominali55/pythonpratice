@@ -6,3 +6,5 @@ print(x)
 
 b=("world")
 print(b)
+
+print(x+b)
