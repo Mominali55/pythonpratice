@@ -4,7 +4,7 @@
 x="hello"
 print(x)
 
-b=("world")
+b="world"
 print(b)
 
 print(x+b)
