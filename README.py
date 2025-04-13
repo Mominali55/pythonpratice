@@ -8,3 +8,8 @@ b="world"
 print(b)
 
 print(x+b)
+
+a=b=c="apple"
+print(a)
+print(b)
+print(c)
