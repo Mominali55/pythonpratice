@@ -25,6 +25,11 @@ for x in e:
 d="*veg*"
 print(d.upper().center(49,"-"))
 
+f={"1.":"butter panner","2.":"panner shawarma","3.":"veg-mandi"}
+for x in f:
+    print(x)
+
+
 
 
 
