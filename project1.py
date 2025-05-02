@@ -2,7 +2,6 @@
 # this file is made for pythonpractice or project.
 # menu card
 
-
 b="welcome to our hotel{:^10} have a good meal"
 print(b.format("^_^").center(3,"-").upper())
 
@@ -37,7 +36,7 @@ f={
 for x,y in f.items():
     print(f"{x[:-1]}.{y}".upper().ljust(30),"30".upper().center(20,"-"))
 
-g="non-veg"
+g="*non-veg*"
 print(g.center(49,"-").upper())
 # Now using list
 b=["butter chicken","chicken sharwma","butter nun"]
@@ -49,9 +48,22 @@ print("3."+b[2].upper().ljust(28),"1000$".upper().center(20,"-"))
 print("4."+b[3].upper().ljust(28),"1$".upper().center(20,"-"))
 print("5."+b[4].upper().ljust(28),"sold out".upper().center(20,"-"))
 
+
+a="*fruits*"
+print(a.upper().center(49,"-"))
 thislist=["apple","banana","cherry"]
 for i in range(len(thislist)):
-    print(i,thislist[0][1])
+     print(f"{i+1}.{thislist[i].upper().ljust(28)}","20$".upper().center(20,"-"))
+
+b="*dessert*"
+print(b.upper().center(49,"~"))
+
+c=["Gulab Jamun","Rasgulla","Ice Cream","Chocolate Brownie"]
+c[4:5]=["khee"]
+price=["200$","111$","300$","400$","200$"]
+
+for x in range(len(c)):
+    print(f"{x+1}.{c[x].upper().ljust(28)}{price[x].upper().center(20,"-")}")
 
 
 
