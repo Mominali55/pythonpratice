@@ -65,11 +65,20 @@ price=["200$","111$","300$","400$","200$"]
 for x in range(len(c)):
     print(f"{x+1}.{c[x].upper().ljust(28)}{price[x].upper().center(20,"-")}")
 
+b="*subject*"
+print(b.upper().center(49,"~"))
+
 a=["apple","banana","mango"]
 i=0
-while i < len(a):
-    print(f"{i+1}.{a[i].upper()}")
-    i=i+1
+
+
+while i < len(a): #range(len(c)):  You cannot use this in while loops
+    fruits=f"{i+1}.{a[i].upper().ljust(9)}"
+    price="200$".upper().center(20,"-").rjust(43)
+    b="\nhello".upper().rjust(30)
+    print(fruits + price+ b)
+    i +=1
+
 
 
 
