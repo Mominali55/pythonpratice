@@ -65,6 +65,11 @@ price=["200$","111$","300$","400$","200$"]
 for x in range(len(c)):
     print(f"{x+1}.{c[x].upper().ljust(28)}{price[x].upper().center(20,"-")}")
 
+a=["apple","banana","mango"]
+i=0
+while i < len(a):
+    print(f"{i+1}.{a[i].upper()}")
+    i=i+1
 
 
 
