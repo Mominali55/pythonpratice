@@ -1,16 +1,34 @@
 a="*form to check wheather you are elible for vote*"
 print(a.upper().center(70,"-"))
-b=str(input("enter your name.".upper()))
-if  b.isupper():
-    print(b)
+b=str(input("male or female".upper()))
+if b=='y' or b=='Y':
+    print("gender is male".upper())
 else:
-    print("plz type the letter in capital".upper())
+    print("gneder is female".upper())
+def address(c):
+     a="*enter your address in the given format*"
+     print(a.upper().center(70,"-"))
+     b="state,city,pincode,flt,"
+     print(b.upper().center(70,"-"))
 
-c=str(input("enter your surname".upper()))
-if c.isalnum():
-    print(c)
+e=(address(input(str)))
+print("*is this your perfect address ?(y/n)*".upper(),address())
+d=str(input())
+if d=='y' or d=='Y':
+    print("confirmed".upper())
 else:
-    print("o")
+    print("re-submission".upper())
+
+
+
+
+
+
+
+
+
+
+
 
 
 
