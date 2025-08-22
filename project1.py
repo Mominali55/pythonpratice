@@ -14,10 +14,10 @@ for x in c:
     print(x.upper().ljust(30),"20$".upper().center(20,"-"))
 
 
-d="*kiddo*"
+d="*Aneme*"
 print(d.upper().center(49,"-"))
 
-e=["1.she is sweet","2.she is cute","3.she is beauty^_^full"]
+e=["1.Gear-5!","2.bankai!!","3.Domain expansion"]
 for x in e:
     print(x.upper().ljust(30),"cannot be define".upper().center(20,"-"))
 
