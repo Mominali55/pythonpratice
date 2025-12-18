@@ -1,29 +1,36 @@
 #---spelling-bee game---
 
-#Declaring the words
-
 words = {"PAIR":5,"HAIR":4,"CHAIR":5,"GRAPHIC":7}
+
+def key_item():
+    print("\n--- Point Values ---")
+    for name, points in words.items():
+        print(f"{name}: {points} points")
+    print("--------------------\n")
 
 def main():
     print("Welcome to the game!")
-    print("You letters are: A I P R C H G")
+    print("Your letters are: A I P R C H G")
+    
+    # FIX 1: Call this at the START, while the dictionary is still full
+    key_item() 
     
     while len(words) > 0:
         print(f"{len(words)} words left")
         guess = input("Guess a word: ").upper()
 
-        #The jackpot word
         if guess == "GRAPHIC":
+            # FIX 2: Save the points BEFORE you clear the list
+            points = words.get("GRAPHIC") 
             words.clear()
-            print(f"Good jovb you scored {words.get('GRAPHIC')} points")
-            print("You win!")
-
-        elif guess in words.keys():
-            points =words.pop(guess)
+            print(f"JACKPOT! You scored {points} points and won automatically!")
+            
+        elif guess in words:
+            points = words.pop(guess)
             print(f"Good job you scored {points} points")
         else:
-            print("Wrong")
-    print("That's the game!")
+            print("Wrong or already guessed.")
             
-        
+    print("That's the game!")  
+
 main()
