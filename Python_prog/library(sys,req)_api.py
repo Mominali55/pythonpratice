@@ -2,9 +2,10 @@ import sys
 import requests
 
 def main():
+    print("Search the Art Institute of Chicago!")
     try:
         response = requests.get(
-            "https://api.artic.edu/api/v1/artworks/search", {"q": artist, "limit": 3} #searching for artist with limit of 3 artworks
+            "https://api.artic.edu/api/v1/artworks/search", {"q": input("Artist: "), "limit": 3} #taking input from user and limiting the results to 3 
         )
         response.raise_for_status()  # Check if the request was successful
     except requests.HTTPError:
