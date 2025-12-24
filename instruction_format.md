@@ -14,5 +14,7 @@
  - If the filename ends with "for_dict2",means it has two examples.
  
  - If the filename ends with a seprated number"import_api_1"this means the file is connected to folder named "museum_1"and contains programs conencted to it or it necessary for the running of the older file 
+
+ -- There are some file name with parenthesis "()" plz rename the file before running it (a simple filename Eg: xyz.py)
     
 
