@@ -8,8 +8,7 @@ def main():
     choices_with_weights(cards)
     sample(cards)
     sample_two(cards)
-
-
+    suffle(cards)
 
 def choice(cards):
     #This function will print one random card
@@ -31,6 +30,12 @@ def sample_two(cards):
     #This function will print two random cards without replacement with seed
     random.seed(0)
     print(random.sample(cards, k=2)) # here we use k=2 to get two random cards(this will only print)
+
+def suffle(cards):
+    #This function will shuffle the cards and print them
+    random.shuffle(cards)
+    for card in cards:
+        print(card)     
 
 main()
 
