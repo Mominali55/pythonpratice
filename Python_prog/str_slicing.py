@@ -1,3 +1,13 @@
+import sys
+
+
+def slice_sys_argv():
+    if len(sys.argv) < 2:
+        sys.exit()
+    for arg in sys.argv[1:]: #Looping over the sys.argv list
+        print("hello there",arg)
+
+
 def main():
     phone = "6174829384"
     
@@ -24,5 +34,7 @@ def main():
     
     print("\n8.Copy of string")
     print(phone[:])
+
+    slice_sys_argv()
 
 main()
