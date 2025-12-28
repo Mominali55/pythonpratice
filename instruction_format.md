@@ -17,4 +17,14 @@
 
  -- There are some file name with parenthesis "()" plz rename the file before running it (a simple filename Eg: xyz.py)
     
+## File name: "SQL_instruction_format.md"
 
+### CMD
+To import a csv file plz follow this steps.
+
+- Make a "filename.db" Eg:practice.db by this CMD.
+-- sqlite3 practice.db
+
+- And then import the after this cmd.
+-- .import filename.csv filename (or any name you want to name it)
+    Use the same cmd for more import
