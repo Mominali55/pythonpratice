@@ -1,5 +1,5 @@
 import sys
-from sayings_1 import goodbye, hello
+from Python_prog.sayings_2 import goodbye, hello
 
 def main():
     calling_hello()
