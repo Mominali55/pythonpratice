@@ -13,7 +13,7 @@ class Student:
 
 def main():
     # student = get_student()
-    student = get_student2()
+    student = get_studenttwo()
     print(f"{student.name} from {student.house}") #The "student.name" are the instances variable
 
 def get_student():
@@ -22,7 +22,7 @@ def get_student():
     student.house=input("House: ")  #Yu can handle the Error of raise by using "try" and "except"
     return student
 
-def get_student2():
+def get_studenttwo():
     name = input("Nmae: ")
     house = input("House: ")
     return  Student(name,house) #Constructer call - object created
