@@ -1,0 +1,21 @@
+# Core ML
+# We remove '+cu118' because we cannot use '>=' with local version labels.
+# The setup script handles the CUDA installation via --index-url.
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# Data Science Stack
+numpy>=1.21.0
+pandas>=1.3.0
+scipy>=1.7.0
+scikit-learn>=1.0.0
+
+# Visualization
+matplotlib>=3.4.0
+seaborn>=0.11.0
+
+# Utilities
+tqdm>=4.60.0
+requests>=2.25.0
+jupyter>=1.0.0
