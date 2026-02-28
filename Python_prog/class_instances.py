@@ -32,7 +32,6 @@ class Student:
 
 def main():
     student = get_studenttwo()
-    
     # We must check if the student was successfully created before doing magic!
     if student:
         print(student) 
@@ -41,7 +40,7 @@ def main():
     else:
         print("No magic today, student creation failed.")
 
- 
+"""  
 def get_student():
     name = input("Name: ")
     house = input("House: ")  
@@ -50,6 +49,7 @@ def get_student():
     student = Student(name, house, spell) 
     return student
 
+"""
 
 def get_studenttwo():
     name = input("Name: ")
