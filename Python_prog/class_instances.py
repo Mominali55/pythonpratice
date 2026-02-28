@@ -1,34 +1,53 @@
 class Student: 
-    #Special Methods
+    # Special Methods
 
-    #intialization method
-    def __init__(self,name,house):  #instance method - gtes called automatically
+    # Initialization method
+    def __init__(self, name, house):  # Instance method - gets called automatically
         if not name:
-            raise ValueError("Missing name") #yu can also make your own error
-        if house not in ["poco","garden","mikes"]:
+            raise ValueError("Missing name") # You can make your own error
+        if house not in ["poco", "garden", "mikes"]:
             raise ValueError("Invalid house")
-        self.name = name #We are storing variable in this instances "it can be name anything"
+        
+        # We are storing variables in this instance
+        self.name = name 
         self.house = house
+
+    # String representation method
+    def __str__(self): #This will be called if just said print(student) instead of the object addreses,etc
+        # Now it prints the actual student's info instead of just "a student"
+        return f"{self.name} from {self.house}"
         
 
 def main():
-    # student = get_student()
     student = get_studenttwo()
-    print(f"{student.name} from {student.house}") #The "student.name" are the instances variable
+    # Only print if a valid student was returned
+    if student:
+        print(student) 
 
+""" 
 def get_student():
-    student=Student() #object created
-    student.name=input("Name: ")
-    student.house=input("House: ")  #Yu can handle the Error of raise by using "try" and "except"
+    name = input("Name: ")
+    house = input("House: ")  
+    # You must pass name and house when creating the object!
+    student = Student(name, house) 
     return student
+"""
 
 def get_studenttwo():
-    name = input("Nmae: ")
+    name = input("Name: ")
     house = input("House: ")
-    return  Student(name,house) #Constructer call - object created
+    
+    # Handling the error using try/except as you mentioned in your notes
+    try:
+        return Student(name, house) # Constructor call - object created
+    except ValueError as e:
+        print(f"Error creating student: {e}")
+        return None
 
 
-# Note:
-# 1.Class are mutabble and yu can make them imutable
-# 2.We use class for customasing are inputs/data
-# 3.
+if __name__ == "__main__":
+    main()
+
+# Notes:
+# 1. Classes are mutable, but you can make them behave immutably using properties.
+# 2. We use classes for customizing and grouping our inputs/data.
