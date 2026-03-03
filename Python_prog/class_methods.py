@@ -1,12 +1,18 @@
-from random import random
+import random
 
 class Hat:
-    def __int__(self):
-        self.houses=["meko","teko","leko","coco"]
 
-    def sort(self,name):
-        house = random.choice(self.houses)
+    houses = ["meko","teko","leko","coco"] #This are called "class variable"
+
+    @classmethod 
+    def sort(cls,name): 
+        house = random.choice(cls.houses)
         print(name,"is in",house)
 
-hat = Hat() #Object creation
-hat.sort("Momin")
+
+Hat.sort("Momin")
+
+
+# Note:
+# 1. if we pass class as parameter in sort it gets conflicted with the original class
+# 2. When yu use "@classmethod" yu dont have to make an object hence we use thsi sometimes
