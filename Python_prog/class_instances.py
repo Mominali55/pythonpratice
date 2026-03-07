@@ -32,6 +32,9 @@ class Student:
 
 def main():
     student = get_studenttwo()
+    cat = Cat()
+    cat.meow()
+
     # We must check if the student was successfully created before doing magic!
     if student:
         print(student) 
@@ -50,6 +53,7 @@ def get_student():
     return student
 
 """
+    
 
 def get_studenttwo():
     name = input("Name: ")
@@ -63,6 +67,13 @@ def get_studenttwo():
         print(f"Error creating student: {e}")
         return None
 
+class Cat:
+    MEOWS = 3
+
+    def meow(self):
+        for _ in range(Cat.MEOWS): 
+            print("Meow!")  
+
 
 if __name__ == "__main__":
     main()
@@ -71,3 +82,5 @@ if __name__ == "__main__":
 # 1. Classes are mutable, but you can make them behave immutably using properties.
 # 2. We use classes for customizing and grouping our inputs/data.
 # 3. When a function is inside a class, it's called a method. When it's outside, it's just a function.
+# 4. We can access class variable using the class name also
+            
