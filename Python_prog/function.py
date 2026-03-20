@@ -48,6 +48,33 @@ print(f"4.Storing in data structure :{calculator["+"](5,3)}")
 # Procedure:
 # 1.here first the "calculator["+"]" will return the function object which is add and then we call it with (5,3) to get the result.
 
+#Tuple
+
+def do_idle():
+    print("Doing nothing")
+
+def do_patrol():
+    print("Patrolling the area")
+
+def do_attack():
+    print("Attacking the enemy")
+
+NPC_ACTION : tuple[callable] = (do_idle,do_patrol,do_attack)
+
+def npc(action:int) -> None:
+    #This is the pythonoic way of writting two conddition when there is a use of two condtions
+    if 0 <= action < len(NPC_ACTION):
+
+        # By adding "()" the function mentioned in teh tuple will execute imeadiately
+        NPC_ACTION[action]()
+    
+    else:
+        print("Errr:Unkmown action found")
+
+print("--- Testing are npc ---\n")
+npc(0)
+
+
 """
 [AI]
 Why is this useful? (The "Senior" Perspective)
