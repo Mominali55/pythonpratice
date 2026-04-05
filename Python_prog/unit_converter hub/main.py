@@ -3,6 +3,8 @@ import sqlite3
 #Title 
 st.title("Unit Converter Hub")
 
+
+
 #databse table
 
 def database_table():
@@ -11,7 +13,7 @@ def database_table():
 
     table1.execute(""" 
         CREATE TABLE conversion_history (
-            id INT PRIMARY KEY,
+            id INTEGER PRIMARY KEY,
             user_input REAL,
             from_unit TEXT,
             to_unit TEXT,
@@ -93,17 +95,21 @@ def INR_to_Dollar():
 
 
 #Saving conversations
-def safe_conversation(user_imput,from_value,to_value,result):
+def safe_conversation(user_input,from_unit,to_unit,result):
     connectors=sqlite3.connect('history.db')
     inserter = connectors.cursor()
 
     inserter.execute('''
         INSERT INTO conversion_history (user_input,from_unit,to_unit,result)
                      VALUES (?,?,?,?)
-    ''',(user_imput,from_value,to_value,result))
+    ''',(user_input,from_unit,to_unit,result))
 
     connectors.commit()
     connectors.close()
+
+
+main()
+
 
 st.write("----")
 st.header("Conversation history")
@@ -119,6 +125,5 @@ display_conv.close()
 st.dataframe(table_displayer)
 
 
-main()
 
     
