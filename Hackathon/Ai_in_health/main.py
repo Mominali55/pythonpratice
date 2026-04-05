@@ -164,6 +164,13 @@ def main():
     torch.save(dbn.state_dict(), 'heart_disease_model.pth')
     print("Model saved to 'heart_disease_model.pth'")
     
+    import json
+    with open('selected_features.json', 'w') as f:
+        # Convert to list if numpy array
+        sel_list = selected_indices.tolist() if hasattr(selected_indices, 'tolist') else list(selected_indices)
+        json.dump(sel_list, f)
+    print("Selected feature indices saved to 'selected_features.json'")
+    
     print("\n--- Pipeline Complete ---")
 
 if __name__ == "__main__":
