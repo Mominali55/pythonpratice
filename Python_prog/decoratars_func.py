@@ -17,3 +17,5 @@ def child(name):
     print(f"The {name} child is ready with hsi school uniform")
 
 child("Slop")
+
+# Note: check how the program flows through thsi function wht arguments are being passed here..etc..
