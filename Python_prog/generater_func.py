@@ -1,12 +1,12 @@
 def count(n):
-    number=[]
     inc=1
     while inc < n:
-        number.append(inc)
+        yield inc
         inc+=1
-    return number
+    # return None
 
 user= int(input("Enter "))
 
-for n in count(user):
+for n in count(user):  #Here "n" gets incremnetd never forget that
     print(n)
+
