@@ -1,11 +1,16 @@
-
-class Car:
-    # The parametr taht are passed are attributes
-    def __init__(self,model,year,color,for_sale): # Constructer or dunder method
-        self.model = model
-        self.year = year
-        self.color = color
-        self.for_sale = for_sale
+"""
+    Here we first use the name of the file {class1_import} 
+    and then {class name}
+""" 
+from class1_import import Car  
 
 car1 = Car("BMW",2020,"Red",True) #invoking the constructor
 print(car1)  #Printing out the address of the object
+
+print(car1.model) 
+print(car1.year)
+print(car1.color)
+print(car1.for_sale)
+
+car1.drive() # calling the "method" drive
+car1.stop() # calling the "method" stop
