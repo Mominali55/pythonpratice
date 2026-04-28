@@ -1,4 +1,10 @@
 """
+# Object = A "bundle" of realted attributes (variables) and methods (function)
+           Ex:phone, car, dog, person 
+           Yu need a classs alwasy to create a n object 
+
+# Class = A blueprint for creating objects
+
     Here we first use the name of the file {class1_import} 
     and then {class name}
 """ 
@@ -13,4 +19,5 @@ print(car1.color)
 print(car1.for_sale)
 
 car1.drive() # calling the "method" drive
-car1.stop() # calling the "method" stop
+car1.stop() 
+car1.details() 
